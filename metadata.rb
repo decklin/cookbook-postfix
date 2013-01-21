@@ -44,6 +44,11 @@ attribute "postfix/myorigin",
   :description => "Sets the myorigin value in main.cf",
   :default => "$myhostname"
 
+attribute "postfix/mydestination",
+  :display_name => "Postfix Mydestination",
+  :description => "Sets the mydestination value in main.cf",
+  :default => "$myhostname"
+
 attribute "postfix/relayhost",
   :display_name => "Postfix Relayhost",
   :description => "Sets the relayhost value in main.cf",
