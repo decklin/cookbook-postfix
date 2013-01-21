@@ -54,6 +54,16 @@ attribute "postfix/mail_relay_networks",
   :description => "Sets the mynetworks value in main.cf",
   :default => "127.0.0.0/8"
 
+attribute "postfix/virtual_alias_domains",
+  :display_name => "Postfix Virtual Alias Domains",
+  :description => "Sets the virtual_alias_domains value in main.cf",
+  :default => ""
+
+attribute "postfix/virtual_aliases",
+  :display_name => "Postfix virtial aliases",
+  :description => "Hash of virtual aliases for /etc/postfix/virtual",
+  :default => ""
+
 attribute "postfix/smtp_sasl_auth_enable",
   :display_name => "Postfix SMTP SASL Auth Enable",
   :description => "Enable SMTP SASL Authentication",

@@ -25,3 +25,13 @@ template "/etc/aliases" do
   source "aliases.erb"
   notifies :run, "execute[update-postfix-aliases]"
 end
+
+execute "update-postfix-virtual" do
+  command "postmap /etc/postfix/virtual"
+  action :nothing
+end
+
+template "/etc/postfix/virtual" do
+  source "virtual.erb"
+  notifies :run, "execute[update-postfix-virtual]"
+end
