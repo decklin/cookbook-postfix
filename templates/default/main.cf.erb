@@ -45,6 +45,7 @@ inet_interfaces = <%= node['postfix']['inet_interfaces'] || 'loopback-only' %>
 mailbox_command = /usr/bin/procmail -a "$EXTENSION"
 <% end -%>
 mailbox_size_limit = 0
+message_size_limit = 0
 recipient_delimiter = +
 
 milter_default_action = <%= node['postfix']['milter_default_action'] %>
