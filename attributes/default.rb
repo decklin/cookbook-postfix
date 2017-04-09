@@ -19,7 +19,8 @@ default['postfix']['mail_type']  = "client"
 default['postfix']['myhostname'] = node['fqdn']
 default['postfix']['mydomain']   = node['domain']
 default['postfix']['myorigin']   = "$myhostname"
-default['postfix']['relayhost']  = ""
+default['postfix']['mydestination'] = "$myhostname"
+default['postfix']['relayhost']     = ""
 default['postfix']['mail_relay_networks']        = "127.0.0.0/8"
 default['postfix']['relayhost_role']             = "relayhost"
 default['postfix']['multi_environment_relay'] = false
@@ -42,6 +43,8 @@ default['postfix']['smtpd_milters']  = ""
 default['postfix']['non_smtpd_milters']  = ""
 
 default['postfix']['aliases'] = {}
+default['postfix']['virtual_alias_domains'] = []
+default['postfix']['virtual_aliases'] = {}
 
 default['postfix']['sender_canonical_classes'] = nil
 default['postfix']['recipient_canonical_classes'] = nil
